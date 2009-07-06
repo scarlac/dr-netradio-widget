@@ -1,0 +1,37 @@
+@import 'debug.css';
+
+html { margin: 0px; padding: 0px; }
+body { background: transparent; font: 13px 'Lucida Grande'; color: #fff; width: 289px; height: 249px; }
+h2 { font-size: 15px; font-family: 'Lucida Grande'; padding: 6px 0px 0px }
+
+a { color: #fff; }
+
+#info { position: absolute; right: 45px; top: 25px; cursor: default; }
+#done { position: absolute; left: 25px; bottom: 28px; cursor: default; }
+.loadindicator { position: absolute; right: 18px; top: 18px; cursor: default; }
+.widgetside { position: relative; width: 289px; height: 249px; }
+.widgetside .widgetcontent { padding: 20px 20px; height: 209px; position: relative; }
+
+#front { background: transparent url('../images/bg-front-collapsed.png') no-repeat 0px 0px; }
+#back { background: transparent url('../images/bg-back.png') no-repeat 0px 0px; }
+
+label { width: 100px; float: left; clear: left; line-height: 21px; margin: 2px 0px; }
+input[type=text],
+input[type=password] { font-size: 14px; padding: 2px; }
+#back input[type=text],
+#back input[type=password] { width: 140px; }
+#back p { margin: 0px 0px 10px; }
+
+
+input[type=text].error { background: #fcc; }
+
+
+#debug { position: absolute; bottom: 35px; left: 20px; }
+#debug input { width: 95px; }
+#debugbtn { position: absolute; bottom: 20px; right: 70px; color: #999; font-size: 9px; background: transparent url('../images/debug.png') no-repeat left top; width: 51px; height: 14px; cursor: pointer; }
+
+
+input[disabled] { opacity: .4; }
+
+.debug { visibility: hidden; }
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>Widget</title>
+		<style type="text/css">
+			@import "css/reset.css";
+			@import "css/widget.css";
+		</style>
+		<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleInfoButton.js' charset='utf-8'></script>
+		<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleAnimator.js' charset='utf-8'></script>
+		<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleButton.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/jquery.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/jquery.color.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/jquery.helptext.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/jquery.pulsate.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/AC_QuickTime.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/widget.js' charset='utf-8'></script>
+	</head>
+	
+	<body onload="setup()">
+		<div id="front" class="widgetside">
+			<div class="widgetcontent">
+				<select id="channels">
+					<option value="" disabled="disabled">Select channel &raquo;</option>
+				</select>
+				<input type="button" onclick="playRadio(); return false;" value="Play" />
+				<input type="button" onclick="stopRadio(); return false;" value="Stop" />
+				Status: <span id="status"></span>
+				
+				<div id="info">&nbsp;</div>
+			</div>
+		</div>
+		<div id="back" class="widgetside" style="display:none">
+			<div class="widgetcontent">
+				<div id="done">&nbsp;</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		QT_WriteOBJECT('' , '10', '10', '', 'EnableJavaScript', 'True', 'AUTOPLAY', 'False', 'postdomevents', 'true', 'obj#ID', 'radioObj', 'emb#ID', 'radioEmbed');
+		</script>
+	</body>
+</html>
