@@ -12,7 +12,7 @@ a { color: #fff; }
 .widgetside { position: relative; width: 289px; height: 249px; }
 .widgetside .widgetcontent { padding: 20px 20px; height: 209px; position: relative; }
 
-#front { background: transparent url('../images/bg-front-collapsed.png') no-repeat 0px 0px; }
+#front { background: transparent url('../images/bg-front.png') no-repeat 0px 0px; }
 #back { background: transparent url('../images/bg-back.png') no-repeat 0px 0px; }
 
 label { width: 100px; float: left; clear: left; line-height: 21px; margin: 2px 0px; }
