@@ -23,17 +23,10 @@
 			<div class="widgetcontent">
 				<select id="channels">
 					<option value="" disabled="disabled">Select channel &raquo;</option>
-				</select>
-				<input type="button" onclick="playRadio(); return false;" value="Play" />
-				<input type="button" onclick="stopRadio(); return false;" value="Stop" />
-				Status: <span id="status"></span>
-				
-				<div id="info">&nbsp;</div>
-			</div>
-		</div>
-		<div id="back" class="widgetside" style="display:none">
-			<div class="widgetcontent">
-				<div id="done">&nbsp;</div>
+				</select><br/>
+				<input type="button" onclick="playRadio(); return false;" value="Play" id="play"
+				/><input type="button" onclick="stopRadio(); return false;" value="Stop" id="stop" />
+				<div id="status"></div>
 			</div>
 		</div>
 		<script type="text/javascript">

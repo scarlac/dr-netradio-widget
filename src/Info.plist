@@ -2,11 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AllowSystem</key>
-	<true/>
-	<key>AllowNetworkAccess</key>
-	<true/>
-	<key>AllowInternetPlugins</key>
+	<key>AllowFullAccess</key>
 	<true/>
 	<key>CFBundleDisplayName</key>
 	<string>TimeTrack</string>
@@ -22,11 +18,7 @@
 	<integer>13</integer>
 	<key>CloseBoxInsetY</key>
 	<integer>13</integer>
-	<key>Height</key>
-	<integer>249</integer>
 	<key>MainHTML</key>
 	<string>widget.html</string>
-	<key>Width</key>
-	<integer>289</integer>
 </dict>
 </plist>
