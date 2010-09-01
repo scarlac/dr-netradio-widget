@@ -1,11 +1,11 @@
 html { margin: 0px; padding: 0px; }
-body { background: transparent; font: 13px 'Lucida Grande'; color: #fff; }
+body { background: transparent; font: 13px 'Lucida Grande'; color: #fff; text-shadow: 0px 1px 1px #000; }
 h2 { font-size: 15px; font-family: 'Lucida Grande'; padding: 6px 0px 0px }
 
 a { color: #fff; }
 
 #front { background: transparent url('../images/bg-front.png') no-repeat 0px 0px; width: 232px; height: 108px; }
-#front .widgetcontent { padding: 20px; }
+#front .widgetcontent { padding: 20px; position: relative; }
 
 #back input[type=text],
 #back input[type=password] { width: 140px; }
@@ -16,6 +16,13 @@ input[type=text].error { background: #fcc; }
 #channels { width: 190px; margin: 4px 0 5px; }
 #play { width: 120px }
 #stop { width: 70px }
-#status { margin: 5px 0 0; text-shadow: 0px 1px 1px #000; }
+
+#status { position: absolute; top: 26px; left: 52px; font-size: 10px; color: #999; }
+#channel_label { position: absolute; top: 14px; left: 52px; font-size: 12px; }
+#channel_changer { background: transparent url('../images/channel-changer.png') no-repeat 0 0; width: 53px; height: 21px; position: absolute; right: 22px; top: 15px; }
+#channel_prev { position: absolute; left: 0; top: 0; height: 100%; width: 17px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat 7px 0; }
+#channel_play { position: absolute; left: 17px; top: 0; height: 100%; width: 18px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat -12px 0; }
+#channel_play.playing { background-position: -12px -21px; }
+#channel_next { position: absolute; right: 0; top: 0; height: 100%; width: 18px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat -32px 0; }
 
 embed,object { visibility: hidden; position: absolute; left: 0; right: 0; }

@@ -6,6 +6,11 @@ function setup() {
 	loadChannels();
 	
 	window.radio = document.embeds[0];
+	window.channelList = [];
+	window.channelListIndex = 0;
+	$('#channel_play').click(playRadio);
+	$('#channel_prev').click(prevChannel);
+	$('#channel_next').click(nextChannel);
 	
 	setInterval(updateStatus, 1000);
 }
@@ -49,10 +54,12 @@ function setChannel(url) {
 }
 
 function playRadio() {
-	if($('#channels').val() != '') {
+	$('#status').text('Playing...');
+	if(channelListIndex >= 0) {
 		radio.Stop();
 		changeChannel();
 		radio.Play();
+		$('#channel_label').text(channelList[channelListIndex].name);
 	}
 }
 function stopRadio() {
@@ -79,6 +86,7 @@ function addChannel() {
 	// subchannels' parent does not have a master stream name
 	if(streamName) {
 		$("#channels").append('<option value="'+streamURL+'">'+name+'</option>');
+		window.channelList.push({ url: streamURL, name: name });
 	}
 	
 	var subchannels = $(this).find(">subChannel");
@@ -88,14 +96,32 @@ function addChannel() {
 }
 
 function changeChannel() {
-	setChannel($('#channels').val());
+	setChannel(channelList[channelListIndex].url);
 }
 
 function updateStatus() {
-	var status = radio.GetPluginStatus();
+	//var status = radio.GetPluginStatus();
 	//if(status.toLowerCase() == 'waiting')
 	//	status = '';
-	$("#status").text(status);
+	//$("#status").text(status);
+	var rate = radio.GetRate();
+	if(rate > 0) { // Playing
+		$('#channel_play').addClass('playing');
+	} else {
+		$('#channel_play').removeClass('playing');
+	}
 }
 
+function prevChannel() {
+	channelListIndex--;
+	if(channelListIndex < 0)
+		channelListIndex = window.channelList.length;
+	$("#status").text(channelList[channelListIndex].name);
+}
 
+function nextChannel() {
+	channelListIndex++;
+	if(channelListIndex > window.channelList.length - 1)
+		channelListIndex = 0;
+	$("#status").text(channelList[channelListIndex].name);
+}
