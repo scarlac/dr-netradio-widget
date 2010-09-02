@@ -18,11 +18,11 @@ input[type=text].error { background: #fcc; }
 #stop { width: 70px }
 
 #status { position: absolute; top: 26px; left: 52px; font-size: 10px; color: #999; }
-#channel_label { position: absolute; top: 14px; left: 52px; font-size: 12px; }
+#channel_label { position: absolute; top: 14px; left: 52px; font-size: 12px; height: 15px; width: 100px; overflow: hidden; overflow-x: -webkit-marquee; white-space: pre; -webkit-marquee-increment: 1px; -webkit-marquee-speed: 70ms; }
 #channel_changer { background: transparent url('../images/channel-changer.png') no-repeat 0 0; width: 53px; height: 21px; position: absolute; right: 22px; top: 15px; }
 #channel_prev { position: absolute; left: 0; top: 0; height: 100%; width: 17px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat 7px 0; }
 #channel_play { position: absolute; left: 17px; top: 0; height: 100%; width: 18px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat -12px 0; }
-#channel_play.playing { background-position: -12px -21px; }
+#front.playing #channel_play.current { background-position: -12px -21px; }
 #channel_next { position: absolute; right: 0; top: 0; height: 100%; width: 18px; cursor: pointer; background: transparent url('../images/controls.png') no-repeat -32px 0; }
 
 embed,object { visibility: hidden; position: absolute; left: 0; right: 0; }
