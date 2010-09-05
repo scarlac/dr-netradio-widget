@@ -71,6 +71,7 @@ function playRadio() {
 }
 function stopRadio() {
 	radio.Stop();
+	radio.SetURL(''); // make sure we stop streaming
 	playingChannelIndex = -1;
 	$('#status').text('Stopped');
 }
